@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 /**
-
+ t Type
 func (t Type) methodName(parameter list)(return list) {
 
 }
@@ -20,6 +20,7 @@ type Emp struct {
 }
 
 //定义一个打印的方法
+//
 func( e Emp)print(){
 	fmt.Printf("Salary of %s is %s%d", e.name, e.currency, e.salary)
 }

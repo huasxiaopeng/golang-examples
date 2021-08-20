@@ -24,8 +24,8 @@ func main() {
         smake["jps"]="jpan"
         fmt.Println(smake)
         //遍历
-        for s, s2 := range smake {
-           fmt.Println("key:=%s,value :=%s",s,s2)
+        for key, value := range smake {
+           fmt.Printf("key:=%s,value :=%s",key,value)
         }
         //对象方式
         var ms =make(map[string]Peson) //声明

@@ -18,6 +18,14 @@ func main() {
         fmt.Println(slice2)
         fmt.Println(slice3)
 
+        slice4s:=make([]int,5)
+        fmt.Println("slice4的值为:",slice4s)
+        slice4s=append(slice4s,1,2,3,4,5)
+        for _, slice4 := range slice4s {
+             fmt.Println("for 遍历的值为：",slice4)
+        }
+
+
         //从数组创建：slice可以从一个数组再次声明。slice通过array[i:j]来获取，
         //其中i是数组的开始位置，j是结束位置，但不包含array[j]，它的长度是j-i:
         var arr = [10]byte {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j'}
