@@ -17,10 +17,10 @@ func main() {
 
 	//时间解析
 	format := now.Format("2006年1月2日 15:04:05")// 必须传入出来的日期，多么的自恋
-	fmt.Println(format)
+	fmt.Println("舒服的格式化：",format)
 	stringTime := "2019-01-01 15:03:01"
 	parse, _ := time.Parse("2006-01-02 15:04:05", stringTime)
-	fmt.Println(parse)
+	fmt.Println("相应的解析",parse)
 
 
 	nowTime := time.Now()
