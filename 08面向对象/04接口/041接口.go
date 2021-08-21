@@ -41,6 +41,12 @@ func(e Employees)SayHi(){
 	fmt.Printf("Hi, I am %s, I work at %s. Call me on %s\n", e.name,
 		e.company, e.phone) //Yes you can split i
 }
+/**
+  使用指针方式
+ */
+//func (e *Employees)SayHi(){
+//	 fmt.Println(e.name,e.phone)
+//}
 
 
 func main() {

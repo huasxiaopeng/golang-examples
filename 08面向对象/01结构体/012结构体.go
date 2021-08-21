@@ -28,6 +28,10 @@ func main() {
 	    // 修改对应的备注信息
         mark.speciality="AI"
 		fmt.Println("His  change speciality is ",mark.speciality)
+        marks:=Student{
+        	Human{"lktbz",20,110},"jiujiu...."}
+        fmt.Println(marks)
+        fmt.Println(marks.Human)
 	/**
 	可以使用"."的方式进行调用匿名字段中的属性值
 

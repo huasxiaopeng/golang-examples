@@ -18,7 +18,7 @@ type Person1 struct {
 	Address1
 }
 func main() {
-
+	//p2 类型的person1 ,可以使用全部的类型
 	var p2 Person1
 	p2.age=20
 	p2.name="ll"

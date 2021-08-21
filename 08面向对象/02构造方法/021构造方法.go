@@ -23,7 +23,8 @@ func  newPubs(name string,age int)*Pubs  {
 }
 //子类构造
 func newSubs(foodName string)*Subs  {
-	 p:=&Subs{}
+	 p:=&Subs{
+	 }
 	 p.foodName=foodName
 	 return p
 }
@@ -31,4 +32,13 @@ func newSubs(foodName string)*Subs  {
 func main() {
 	s := newSubs("一哥")
 	fmt.Println(s)
+
+	//这种构造方式，感觉很是奇怪
+	//直接使用这种方式进行替代
+	sb:=new(Subs)
+	sb.foodName="beef"
+	sb.age=20
+	sb.Name="black girls"
+	fmt.Println(sb)
+
 }

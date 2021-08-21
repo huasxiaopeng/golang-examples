@@ -28,6 +28,13 @@ func newPersonByNameAndAge(name string,age int)*Pt  {
     	Age: age,
 	}
 }
+//构造函数方式
+func newPersonDemo(name string, age int)*Pt{
+	return &Pt{
+		Name: name,
+		Age: age,
+	}
+}
 
 func main() {
 	p1:=newPersonByName("lktbz")
