@@ -16,9 +16,11 @@ func main() {
 
 	a := 1
 	b := 2
-	defer fmt.Println(b)
+	defer fmt.Println("延迟执行B的值为：",b)
 	fmt.Println(a)
-
+	b=3
+	fmt.Println("修改b的值:",b)
+	//通过比较延迟加载的和修改后的值，他俩并补相等
 	nums := []int{78, 109, 2, 563, 300}
 	largest(nums)
 }
