@@ -71,10 +71,21 @@ func main() {
 	fmt.Printf("指向指针的指针变量 pptr = %d\n", pptr)
 	fmt.Printf("指向指针的指针变量 &pptr = %d\n", &pptr)
 
-
-
+  var ms *mystruct
+	fmt.Println(ms)
+	//ms=&mystruct{foo: 42}
+   //fmt.Println("指针类型：",ms)
+   //使用new 替换上面的
+ ms=new(mystruct)
+	(*ms).foo=42
+ //ms.foo=22  这是方式是推荐的，简单理解
+ //fmt.Println(ms)
+ fmt.Println((*ms).foo)  //指针取值，没有地址符号
 }
 
+type mystruct struct {
+	foo int
+}
 func change(val *int) {
 	*val = 55
 }
