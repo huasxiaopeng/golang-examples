@@ -5,22 +5,18 @@ import (
 	"fmt"
 	"github.com/go-redis/redis"
 )
-var ctx = context.Background()
+
 func main() {
+	var ctxs = context.Background()
+
 	rdb := redis.NewClient(&redis.Options{
 		Addr:     "192.168.5.145:6379",
 		Password: "", // no password set
 		DB:       0,  // use default DB
 	})
-	err := rdb.Set(ctx, "lk", "zs", 10).Err()
-	if err != nil {
-		panic(err)
-	}
-	result, err := rdb.Get(ctx, "lk").Result()
-	if err != nil {
-		panic(err)
-	}
-	fmt.Println("lk", result)
+	//查询一个不存在的key 对其进行健壮性检查
+	get:=rdb.Get(ctxs, "order")
 
+	fmt.Println(get.Val(),get.Err())
 
 }
