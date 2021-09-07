@@ -85,5 +85,20 @@ func main() {
 
 
 
+	  if n1,n2:="d","a";n1==n2{
+	  	fmt.Println("n1 and n2 相等")
+	  }else if n1=="d"&& n2=="a"{
+	  	fmt.Println("n1==d,n2==a")
+	  }else{
+	  	fmt.Println("n1,n2 既不是a也不是b")
+	  }
 
+	  //高级用法
+	  //初始化条件变量                 检查条件变量是否符合条件
+	  if n3,n4,check:=413,404,true;check{
+	  	fmt.Println(n3+n4) //符合条件执行语句
+	  }
+	if n3,n4,check:=413,404,false;!check{
+		fmt.Println(n3-n4) //符合条件执行语句
+	}
 }

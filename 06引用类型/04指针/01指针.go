@@ -23,4 +23,19 @@ func main() {
     cc:=&aa[1]
     fmt.Println("bb:",bb," cc:",cc)
     fmt.Println("bb:",*bb," cc:",*cc)
+
+
+    //对比
+     var p1 *string
+     var s1 *User
+	 s2:=User{}
+	 s3:=&User{}
+	 fmt.Println(p1)
+	 fmt.Println(s1)
+	 fmt.Println(s2)
+	 fmt.Println(s3)
+}
+
+type User struct {
+
 }

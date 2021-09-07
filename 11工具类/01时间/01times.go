@@ -10,6 +10,7 @@ func main() {
 	fmt.Printf("%T\n",now)
 	fmt.Printf("%t\n",now)
 	fmt.Println(now)
+	fmt.Println("location--",now.Location().String())
 	year:=now.Year()
     fmt.Println("year:=",year)
 	//自定义时间
@@ -67,6 +68,7 @@ func main() {
 		fmt.Println(err)
 		return
 	}
+	fmt.Println("loc=",loc,"---",now.In(loc))
 	// 按照指定时区和指定格式解析字符串时间
 	timeObj, err := time.ParseInLocation("2006/01/02 15:04:05", "2019/08/04 14:15:20", loc)
 	if err != nil {

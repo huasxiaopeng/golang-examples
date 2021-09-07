@@ -59,4 +59,10 @@ func main() {
 	fmt.Printf("azc的值为 : %d\n",azc)
 	azc++
 }
+
+
+
+
+
+
 }
